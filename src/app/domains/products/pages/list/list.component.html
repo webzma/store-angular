@@ -1,4 +1,23 @@
-<section class="bg-gray-50 px-12 py-2 antialiased container mx-auto">
+<section class="antialiased mx-auto flex space-x-4">
+  <div>
+    <h3 class="text-xl font-semibold">Categories</h3>
+    <ul class="text-gray-600 mr-24 mt-8">
+      <li>
+        <a routerLink="/">All</a>
+      </li>
+      @for (category of categories(); track $index) {
+      <li>
+        <a
+          routerLink="/"
+          [queryParams]="{ category_id: category.id }"
+          class="hover:underline"
+          >{{ category.name }}</a
+        >
+      </li>
+      }
+    </ul>
+  </div>
+
   <div
     class="mx-auto px-4 2xl:px-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-center pt-8"
   >

@@ -1,5 +1,5 @@
 <nav>
-  <div class="w-full flex flex-wrap items-center justify-between mx-auto py-4">
+  <div class="w-full flex flex-wrap items-center justify-between mx-auto py-6">
     <div class="flex items-center space-x-8">
       <a href="https://flowbite.com/" class="flex items-center">
         <img
@@ -15,16 +15,30 @@
         <li>
           <a
             routerLink="/"
+            routerLinkActive="underline"
+            [routerLinkActiveOptions]="{ exact: true }"
             class="block underline hover:underline"
             aria-current="page"
             >Home</a
           >
         </li>
         <li>
-          <a routerLink="/about" class="block hover:underline">About</a>
+          <a
+            routerLink="/about"
+            routerLinkActive="underline"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="block hover:underline"
+            >About</a
+          >
         </li>
         <li>
-          <a href="#" class="block hover:underline">Services</a>
+          <a
+            href="#"
+            routerLinkActive="underline"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="block hover:underline"
+            >Services</a
+          >
         </li>
       </ul>
     </div>
@@ -55,7 +69,7 @@
 </nav>
 
 <div
-  class="fixed border-l-4 top-0 right-0 bg-red z-40 w-72 h-screen p-4 overflow-y-auto transition-transform bg-white"
+  class="fixed border-l top-0 right-0 bg-red z-40 w-72 h-screen p-4 overflow-y-auto transition-transform bg-white"
   [class.translate-x-full]="hideSideMenu()"
 >
   <div class="flex justify-between items-center mb-4">
@@ -88,7 +102,7 @@
     <img
       [src]="product.images[0]"
       alt="Product image"
-      class="size-8 rounded-xl"
+      class="size-12 rounded"
     />
   </div>
   }

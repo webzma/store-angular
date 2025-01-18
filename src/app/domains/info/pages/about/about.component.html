@@ -7,12 +7,9 @@
     ad et eveniet odit rem perferendis porro, quidem iste.
   </p>
   <p class="text-xs">
-    Numero de clientes
-    <app-counter
-      [duration]="duration()"
-      [message]="message()"
-      *ngIf="duration() > 0"
-    />
+    Numero de clientes @if (duration() > 0) {
+    <app-counter [duration]="duration()" [message]="message()" />
+    }
   </p>
   <div>
     <app-wave-audio audioUrl="/relaxing-guitar-loop-v5-245859.mp3" />
